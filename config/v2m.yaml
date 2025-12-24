@@ -1,0 +1,67 @@
+path:
+  video_path: "/path/to/Dataset/video_features"
+  preprocessed_path: "/path/to/Dataset/music_features"
+  music_target_path: "/path/to/Dataset/musictarget"
+train:
+  batch_size: 6
+  epochs: 100
+  save_per_epoch: 20
+  lr: 0.0001
+  schedule_type: "cosine"
+  loss_type: "l1"
+features:
+  video_length: 35
+  pitch_channels: 1025
+  loudness_channels: 1
+  chroma_channels: 12
+  spectral_channels: 1
+  feature_length: 61
+codebooks_pattern:
+  modeling: delay
+  delay:
+    delays: [0, 1, 2, 3]
+    flatten_first: 0
+    empty_initial: 0
+  unroll:
+    flattening: [0, 1, 2, 3]
+    delays: [0, 0, 0, 0]
+  music_lm:
+    group_by: 2
+  valle:
+    delays: [0, 0, 0]
+transformer:
+  layers: 8
+  encoder_hidden: 512
+  dropout: 0.1
+transformer_lm:
+  hidden_scale: 4
+  dropout: 0.1
+  emb_lr: null
+  activation: gelu
+  past_context: null
+  causal: true
+  custom: false                 # use custom MHA implementation
+  layer_scale: null
+  positional_embedding: sin     # positional embedding strategy (sin, rope, or sin_rope).
+  xpos: false                   # apply xpos decay (rope only).
+  checkpointing: none      # layer checkpointing method, can be none, torch, xformers_default.
+                           # torch is the slowest but uses the least memory,
+                           # xformers_default is somewhere in between.
+  norm: layer_norm             # normalization method to use in transformer.
+  cross_attention: true
+  qk_layer_norm: false
+  qk_layer_norm_cross: false
+  attention_dropout: null
+  kv_repeat: 1
+  n_q: 4
+  card: 2048
+  dim: 1024
+  num_heads: 16
+  num_layers: 24
+  memory_efficient: true
+  bias_proj: false
+  bias_ff: false
+  bias_attn: false
+  norm_first: true
+  layer_scale: null
+  attention_as_float32: false
