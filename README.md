@@ -25,9 +25,9 @@ pip install -r requirements.txt
 
 If you find an error about torch and CuDNN during **training** or **inference**, please try "pip install torch==2.0.0 torchaudio==2.0.0 torchvision==0.15.1 xformers==0.0.17", but keep it like those in 'requirements.txt' during **data preprocessing**.
 ### 3. Data Preprocessing
-
+* Dowmload SegGPT model from [SegGPT](https://huggingface.co/BAAI/SegGPT/blob/main/seggpt_vit_large.pth) and put it into './segment/SegGPT/SegGPT_inference' folder.
+* Download SAM model from [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth) and put it into './segment/images' folder.
 Please refer to ./data_process.py
-(TODO: We haven't uploaded the code and model of SAM and Transnet-V2 now due to the file size limit, we will try to upgrade as soon as possible)
 
 ### 4. Training
 
@@ -39,7 +39,6 @@ Please refer to ./data_process.py
   config/v2m.yaml path.video_path path/to/video_feature_input_folder
   config/v2m.yaml path.preprocessed_path path/to/music_feature_input_folder
   config/v2m.yaml path.music_target_path path/to/music_target_output_folder
-
   ```
 * run training
 
@@ -63,7 +62,7 @@ We will release the model weight soon.
 
 ### 7. Acknowledgements
 
-you may refer to related work that serves as foundations for our framework and code repository, CLIP, MusicGen. Thanks for their wonderful works.
+you may refer to related work that serves as foundations for our framework and code repository, CLIP, MusicGen, SAM, SegGPT, Transnet-V2. Thanks for their wonderful works.
 
 ### 8. Citation
 ```
