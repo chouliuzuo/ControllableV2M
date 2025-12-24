@@ -27,7 +27,7 @@ If you find an error about torch and CuDNN during **training** or **inference**,
 ### 3. Data Preprocessing
 * Dowmload SegGPT model from [SegGPT](https://huggingface.co/BAAI/SegGPT/blob/main/seggpt_vit_large.pth) and put it into './segment/SegGPT/SegGPT_inference' folder.
 * Download SAM model from [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth) and put it into './segment/images' folder.
-Please refer to ./data_process.py
+* Please refer to ./data_process.py
 
 ### 4. Training
 
