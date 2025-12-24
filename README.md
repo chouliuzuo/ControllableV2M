@@ -1,9 +1,10 @@
 ## Spatial-Temporal Decomposition and Alignment in Controllable Video-to-Music Generation
 
 [[Paper](https://dl.acm.org/doi/abs/10.1145/3746027.3755523)]
+
 ![Model Architecture](./static/images/model.png)
 
-This is the official repository for "Spatial-Temporal Decomposition and Alignment in Controllable Video-to-Music Generation" (ACM MM 25')
+This is the official repository for "Spatial-Temporal Decomposition and Alignment in Controllable Video-to-Music Generation" (ACM MM 25').
 ### 1. Example Data Input
 
 ./examples
@@ -26,6 +27,7 @@ If you find an error about torch and CuDNN during **training** or **inference**,
 ### 3. Data Preprocessing
 
 Please refer to ./data_process.py
+(TODO: We haven't uploaded the code and model of SAM and Transnet-V2 now due to the file size limit, we will try to upgrade as soon as possible)
 
 ### 4. Training
 
