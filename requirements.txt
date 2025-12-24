@@ -1,9 +1,11 @@
 av==11.0.0
 einops
+fairscale==0.4.13
 flashy>=0.0.1
 ffmpy
 ftfy
 gensim
+git+https://github.com/facebookresearch/detectron2.git
 h5py
 httpx
 huggingface-hub
@@ -22,6 +24,7 @@ soundfile
 tensorboard==2.15.1
 tensorboard-data-server==0.7.2
 tensorboardX==2.6.2.2
+timm
 torch==2.2.0
 torchaudio==2.2.0
 torchmetrics
