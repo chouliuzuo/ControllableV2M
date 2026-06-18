@@ -58,7 +58,7 @@ Remember to change the number in Line 295 in 'inference.py' if you need to chang
 
 ### 6. Model weights
 
-We will release the model weight soon.
+The model weights are released at [here](https://huggingface.co/chouliu/ControllableV2M/tree/main).
 
 ### 7. Acknowledgements
 
